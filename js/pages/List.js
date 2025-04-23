@@ -106,30 +106,39 @@ export default {
                             </li>
                         </ol>
                     </template>
-                    <h3>Submission Requirements</h3>
+                    <h3>Требование к отправке рекорда :</h3>
                     <p>
-                        Achieved the record without using hacks (however, FPS bypass is allowed, up to 360fps)
+                        1. Использовать Читы, megahack и тд можно, однако у вас тогда должен быть включен Cheat индикатор а также мод меню вы должы показать в конце видео с верифом!
                     </p>
                     <p>
-                        Achieved the record on the level that is listed on the site - please check the level ID before you submit a record
+                        2. Для того чтобы ваш уровень вставили в лист вам нужно обязательно это записать это на видео а также у вас должен быть на него рау футаж (Сырой футаж *ссылки на ютуб не принимаем*) тоесть условно полная запись с самого начало до самого окончания. А также запись нельзя редактировать в разных видео редакторах!
                     </p>
                     <p>
-                        Have either source audio or clicks/taps in the video. Edited audio only does not count
+                        3. Чтобы ваш рекорд попал в лист нужно чтобы на вашей записи были слышны клики а также при желании чтобы было больше доверия вы можете записать с hand cam проще говоря чтобы у вас было камера направлена на мышку или на то на чём вы играйте.
                     </p>
                     <p>
-                        The recording must have a previous attempt and entire death animation shown before the completion, unless the completion is on the first attempt. Everyplay records are exempt from this
+                        4. Ваше видео дольжно обязательно быть публичное если вы планируйте выкладывать на площадку Youtube.
                     </p>
                     <p>
-                        The recording must also show the player hit the endwall, or the completion will be invalidated.
+                        5. На записе должны быть показаны количество попыток.
                     </p>
                     <p>
-                        Do not use secret routes or bug routes
+                        6. Если мы заметим что прохождение уровня вы прошли нечестно и выставляйте за честно то мы имеем полное право вас заблокировать из листа на неограниченный срок!
                     </p>
                     <p>
-                        Do not use easy modes, only a record of the unmodified level qualifies
+                        7. Уровни начинаю со сложности Insane Demon могут вставится в демон лист.
                     </p>
                     <p>
-                        Once a level falls onto the Legacy List, we accept records for it for 24 hours after it falls off, then afterwards we never accept records for said level
+                        8. За прохождение уровня даются баллы чем легче уровень тем меньше даёться баллов.
+                    </p>
+                    <p>
+                        9. Всего мест в топе 100 дальше уровни которые сложные но уже не влезают в лист попадают в beyond list.
+                    </p>
+                    <p>
+                        10. Нельзя использовать секретные проходы и сваг роуты для прохождение уровня! Такие заявки будут просто игнорироватся!
+                    </p>
+                    <p>
+                        11. На сайте если уровень в виде просто картинки значит что видео прохождение нету либо утеряно если в виде ссылки на ютуб то это значит что видео прохождение на ютубе.
                     </p>
                 </div>
             </div>
