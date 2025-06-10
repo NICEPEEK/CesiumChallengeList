@@ -59,7 +59,10 @@ export async function fetchLeaderboard() {
 
         // Verification
         const verifier = Object.keys(scoreMap).find(
-            (u) => u.toLowerCase() === level.verifier.toLowerCase(),
+            (u) =>
+                typeof u === 'string' &&
+                typeof level.verifier === 'string' &&
+                u.toLowerCase() === level.verifier.toLowerCase(),
         ) || level.verifier;
         scoreMap[verifier] ??= {
             verified: [],
@@ -76,8 +79,20 @@ export async function fetchLeaderboard() {
 
         // Records
         level.records.forEach((record) => {
+            // Пропускаем пустые или некорректные записи
+            if (
+                !record ||
+                typeof record.user !== 'string' ||
+                typeof record.percent !== 'number' ||
+                typeof record.link !== 'string'
+            ) {
+                return;
+            }
             const user = Object.keys(scoreMap).find(
-                (u) => u.toLowerCase() === record.user.toLowerCase(),
+                (u) =>
+                    typeof u === 'string' &&
+                    typeof record.user === 'string' &&
+                    u.toLowerCase() === record.user.toLowerCase(),
             ) || record.user;
             scoreMap[user] ??= {
                 verified: [],
@@ -107,15 +122,21 @@ export async function fetchLeaderboard() {
 
     // Wrap in extra Object containing the user and total score
     const res = Object.entries(scoreMap).map(([user, scores]) => {
-        const { verified, completed, progressed } = scores;
+        // Ensure arrays exist
+        const verified = Array.isArray(scores.verified) ? scores.verified : [];
+        const completed = Array.isArray(scores.completed) ? scores.completed : [];
+        const progressed = Array.isArray(scores.progressed) ? scores.progressed : [];
+        // Sum only numeric scores
         const total = [verified, completed, progressed]
             .flat()
-            .reduce((prev, cur) => prev + cur.score, 0);
+            .reduce((prev, cur) => prev + (typeof cur.score === 'number' ? cur.score : 0), 0);
 
         return {
             user,
             total: round(total),
-            ...scores,
+            verified,
+            completed,
+            progressed,
         };
     });
 
