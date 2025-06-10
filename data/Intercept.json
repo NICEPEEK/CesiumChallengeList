@@ -9,7 +9,10 @@
     "percentToQualify": 100,
     "password": "Not Copyable",
     "records": [
-        {
+        {   "user": "NICEPEEK",
+            "link": "",
+            "percent": 100,
+            "hz": 240
         }
     ]
 }
