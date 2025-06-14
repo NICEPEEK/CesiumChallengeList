@@ -9,7 +9,14 @@
     "percentToQualify": 63,
     "password": "Not Copyable",
     "records": [
-        {
-        }
+        {   "user": "ZartZaZ",
+            "link": "",
+            "percent": 95,
+            "hz": 360
+        },
+        {   "user": "NICEPEEK",
+            "link": "",
+            "percent": 95,
+            "hz": 60}
     ]
 }
