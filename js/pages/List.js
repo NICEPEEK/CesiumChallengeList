@@ -44,8 +44,8 @@ export default {
                         <button class="tab type-label-lg" :class="{selected: !toggledShowcase}" @click="toggledShowcase = false">
                             <span class="type-label-lg">Verification</span>
                         </button>
-                        <button class="tab" :class="{selected: toggledShowcase}" @click="toggledShowcase = true">
-                            <span class="type-label-lg">Showcase</span>
+                        <button class="tab" :class="{selected: toggled}" @click="toggledShowcase = true">
+                            <span class="type-label-lg"></span>
                         </button>
                     </div>
                     <iframe class="video" id="videoframe" :src="video" frameborder="0"></iframe>
@@ -150,7 +150,6 @@ export default {
         errors: [],
         roleIconMap,
         store,
-        toggledShowcase: false,
     }),
     computed: {
         level() {
@@ -160,15 +159,12 @@ export default {
             const selectedItem = this.list[this.selected];
             return selectedItem ? selectedItem[0] : null;
           },
-        video() {
-            if (!this.level.showcase) {
+        video() { {
                 return embed(this.level.verification);
             }
 
             return embed(
-                this.toggledShowcase
-                    ? this.level.showcase
-                    : this.level.verification
+                     this.level.verification
             );
         },
     },
